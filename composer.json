@@ -2,7 +2,7 @@
     "name": "nogn/craft-gridsome",
     "description": "Nogn provides a seamless headless Craft CMS experience with Gridsome.",
     "type": "craft-plugin",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "keywords": [
         "craft",
         "cms",
