@@ -1,0 +1,42 @@
+{
+    "name": "nogn/craft-gridsome",
+    "description": "Nogn provides a seamless headless Craft CMS experience with Gridsome.",
+    "type": "craft-plugin",
+    "version": "0.1.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "gridsome",
+        "nogn",
+        "headless",
+        "jamstack",
+        "live-preview"
+    ],
+    "support": {
+        "docs": "https://nogn.io/craft-gridsome",
+        "issues": "https://github.com/nogn-hq/craft-gridsome/issues"
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Ben Sheedy",
+            "homepage": "https://bensheedy.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "nogn\\craftgridsome\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Gridsome Nogn",
+        "handle": "craft-gridsome",
+        "changelogUrl": "https://raw.githubusercontent.com/nogn-hq/craft-gridsome/master/CHANGELOG.md",
+        "class": "nogn\\craftgridsome\\CraftGridsome"
+    }
+}

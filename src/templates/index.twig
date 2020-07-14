@@ -1,0 +1,23 @@
+{% extends "_layouts/cp" %}
+{%  import '_includes/forms' as forms  %}
+
+{% set title = "Manage Static Sites"|t('plugin-handle') %}
+
+{% block actionButton %}
+    {% set newSiteUrl = url('craft-gridsome/new') %}
+    <a href="{{ newSiteUrl }}" class="submit btn add icon">{{ "New site"|t('craft-gridsome') }}</a>
+{% endblock %}
+
+{% block content %}
+<h3>Entries</h3>
+  {% set sections = craft.sections.getAllSections() %}
+    {% for section in sections %}
+    {{ forms.checkboxfield({
+      first: loop.index == 1,
+      label: section.name,
+      name: "section",
+      value: section.id,
+      placeholder: 'https://example.com',
+    }) }}
+  {% endfor %}
+{% endblock %}

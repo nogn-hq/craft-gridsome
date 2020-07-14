@@ -1,0 +1,42 @@
+{% extends '_layouts/cp' %}
+{% set title = 'Manage Gridsome Sites'|t('craft-gridsome') %}
+{% set selectedSubnavItem = 'site' %}
+
+{% from '_includes/forms' import lightswitch %}
+
+{% block actionButton %}
+    {% set newSiteUrl = url('craft-gridsome/new') %}
+    <a href="{{ newSiteUrl }}" class="submit btn add icon">{{ "New nogn"|t('craft-gridsome') }}</a>
+{% endblock %}
+
+{% block content %}
+
+    {% if 'graphql/api' not in craft.app.routes.getConfigFileRoutes  %}
+        <div  style="margin-bottom: 2em;display:flex; align-items: center; background-color: #ffe9e9; padding: .5rem 1rem; border-radius: 5px;" class="error">
+            <svg style="height: 1.5rem" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+            <div style="margin-left: .5rem">You must <a href="https://docs.craftcms.com/v3/graphql.html#getting-started">enable the GraphQL endpoint</a> for Gridsome to access the data.</div>
+        </div> 
+    {% endif %}
+
+    {% if sites|length %}
+        <table class="data fullwidth">
+            <thead>
+                <tr>
+                    <th>{{ 'Site'|t('craft-gridsome') }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for site in sites %}
+                    <tr data-id="{{ site.id }}">
+                        <th><a href="{{ cpUrl("craft-gridsome/#{site.id}") }}">{{ site.name }}</a></th>
+                        
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>{{ 'No sites exist yet.'|t('craft-gridsome') }}</p>
+    {% endif %}
+
+
+{% endblock %}
