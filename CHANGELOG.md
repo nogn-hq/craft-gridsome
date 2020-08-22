@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.1.2 - 2020-08-22
+### Fixed
+- Typo for config example
+
 ## 0.1.1 - 2020-07-14
 ### Fixed
 - Allow trailing slashes on url
