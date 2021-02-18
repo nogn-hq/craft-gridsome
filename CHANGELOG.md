@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.1.2 - 2021-02-18
+### Fixed
+- Deprecation errors
+
 ## 0.1.2 - 2020-08-22
 ### Fixed
 - Typo for config example
