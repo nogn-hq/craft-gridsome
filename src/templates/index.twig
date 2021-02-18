@@ -10,7 +10,7 @@
 
 {% block content %}
 <h3>Entries</h3>
-  {% set sections = craft.sections.getAllSections() %}
+  {% set sections = craft.app.sections.allSections %}
     {% for section in sections %}
     {{ forms.checkboxfield({
       first: loop.index == 1,

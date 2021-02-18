@@ -67,7 +67,7 @@
 
     {% set sectionsOptions = [] %}
     
-    {% set sections = craft.sections.getAllSections() %}
+    {% set sections = craft.app.sections.allSections %}
         {% for section in sections %}
         {% set sectionsOptions = sectionsOptions|merge([{ label: section.name, value: section.id }]) %}
     {% endfor %}
