@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.1.2 - 2021-02-18
+## Unreleased  
+
+### Fixed  
+- Typo in changelog
+## 0.1.3 - 2021-02-18
 ### Fixed
 - Deprecation errors
 
