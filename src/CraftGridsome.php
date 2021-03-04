@@ -121,13 +121,19 @@ class CraftGridsome extends Plugin
                 if (in_array($sectionId, $site->sectionIds)) {
                     $uid = $event->sender->getSourceUid() ?? $event->sender->uid;
                     
-                    // url with trailing slash
-                    $url = Craft::parseEnv($site->url);
-                    $url = rtrim($url,"/").'/';
+                    // site URL with trailing slash
+                    $siteUrl = Craft::parseEnv($site->url);
+                    $siteUrl = rtrim($siteUrl,"/").'/';
+
+                    // follow addTrailingSlashesToUrls config
+                    $url = $siteUrl . $event->sender->uri;
+                    if (Craft::$app->getConfig()->getGeneral()->addTrailingSlashesToUrls) {
+                        $url = rtrim($url,"/").'/';
+                    }
                     
                     $event->previewTargets[] = [
                         'label' => $site->name,
-                        'url' => $url . $event->sender->uri 
+                        'url' => $url
                             . '?nogn-uid=' . $uid
                             . '&nogn-slug=' . $event->sender->slug
                             . '&nogn-template=' . $template
