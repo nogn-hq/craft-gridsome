@@ -2,10 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
 ## 0.1.4 - 2021-03-04  
 
 ### Added
 - Preview URLs from environment variables
+
 ### Fixed  
 - Typo in changelog
 - Trailing slashes on preview
