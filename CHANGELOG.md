@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.1.2 - 2021-02-18
+## 0.1.4 - 2021-03-04  
+
+### Added
+- Preview URLs from environment variables
+### Fixed  
+- Typo in changelog
+- Trailing slashes on preview
+
+## 0.1.3 - 2021-02-18
 ### Fixed
 - Deprecation errors
 

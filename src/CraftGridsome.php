@@ -120,9 +120,14 @@ class CraftGridsome extends Plugin
                 
                 if (in_array($sectionId, $site->sectionIds)) {
                     $uid = $event->sender->getSourceUid() ?? $event->sender->uid;
+                    
+                    // url with trailing slash
+                    $url = Craft::parseEnv($site->url);
+                    $url = rtrim($url,"/").'/';
+                    
                     $event->previewTargets[] = [
                         'label' => $site->name,
-                        'url' => $site->url . $event->sender->uri 
+                        'url' => $url . $event->sender->uri 
                             . '?nogn-uid=' . $uid
                             . '&nogn-slug=' . $event->sender->slug
                             . '&nogn-template=' . $template
