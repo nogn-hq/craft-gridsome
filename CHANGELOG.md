@@ -4,8 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased  
 
+### Added
+- Preview URLs from environment variables
 ### Fixed  
 - Typo in changelog
+- Trailing slashes on preview
+
 ## 0.1.3 - 2021-02-18
 ### Fixed
 - Deprecation errors
