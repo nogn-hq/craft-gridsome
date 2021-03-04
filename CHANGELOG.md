@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+### Added  
+- support addTrailingSlashesToUrls
+
 ## 0.1.4 - 2021-03-04  
 
 ### Added
