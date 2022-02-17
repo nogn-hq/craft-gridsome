@@ -119,7 +119,7 @@ class CraftGridsome extends Plugin
                 // $templateKebab = strtolower(preg_replace('%([A-Z])([a-z])%', '-\1\2', $template));
                 
                 if (in_array($sectionId, $site->sectionIds)) {
-                    $uid = $event->sender->getSourceUid() ?? $event->sender->uid;
+                    $uid = $event->sender->getCanonicalUid() ?? $event->sender->uid;
                     
                     // site URL with trailing slash
                     $siteUrl = Craft::parseEnv($site->url);
