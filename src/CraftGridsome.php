@@ -137,7 +137,7 @@ class CraftGridsome extends Plugin
                             . '?nogn-uid=' . $uid
                             . '&nogn-slug=' . $event->sender->slug
                             . '&nogn-template=' . $template
-                            . '&nogn-id=' . $event->sender->sourceId ?? $event->sender->id,
+                            . '&nogn-id=' . $event->sender->canonicalUid ?? $event->sender->id,
                         'refresh' => false,
                     ];
                 };
