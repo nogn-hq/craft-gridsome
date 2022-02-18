@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.1.7 - unreleased
+
+### Fixed 
+- bump version requirement
+
 ## 0.1.6 - 2022-17-02 
 
 ### Fixed 
